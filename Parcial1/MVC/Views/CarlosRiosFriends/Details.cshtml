@@ -1,0 +1,50 @@
+﻿@model MVC.Models.CarlosRiosFriend
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CarlosRiosFriend</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoAmigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoAmigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apodo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apodo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cumpleaños)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cumpleaños)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Llave }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

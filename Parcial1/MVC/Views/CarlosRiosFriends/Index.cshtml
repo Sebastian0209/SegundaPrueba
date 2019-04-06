@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MVC.Models.CarlosRiosFriend>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoAmigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apodo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cumpleaños)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoAmigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apodo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cumpleaños)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Llave }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Llave }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Llave })
+        </td>
+    </tr>
+}
+
+</table>
